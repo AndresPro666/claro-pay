@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useContext } from 'react'
-import {CONTEXT} from '../../context';
+import {CONTEXT} from '../../App/context';
 
 
 const Home:FunctionComponent = () => {

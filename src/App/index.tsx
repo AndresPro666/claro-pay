@@ -4,29 +4,20 @@ import React, {
   FunctionComponent,
   useMemo
 } from "react";
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql
-} from "@apollo/client"
-
+import {gql} from "@apollo/client"
+import client from "../Api"
 import Provider from "./context"
-import Home from "./Page/Home/Index"
+import Home from "../Page/Home/Index"
 
-import { store } from './Reducer/store'
-import { reducer } from './Reducer/reducer'
+import { store } from '../Core/store'
+import {home}  from '../Core/Reducer/home'
+import {ADD_INITIAL_VALUE} from '../Core/Types'
 
-import { IdentifyType } from './utils/getIdentifyType'
+import { IdentifyType } from '../utils/getIdentifyType'
 
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql',
-  cache: new InMemoryCache()
-});
 
 const App: FunctionComponent = () => {
-  const [state, dispatch] = useReducer(reducer, store);
+  const [state, dispatch] = useReducer(home, store);
   const indentifyType = IdentifyType(window.location.pathname.replace('/', ''));
 
   useEffect(() => {
@@ -36,7 +27,7 @@ const App: FunctionComponent = () => {
       query: gql`
         query Claropay {
           claropay(
-            ${indentifyType.type}: "${indentifyType.value}"
+            phoneNumber: "1123423423"
           ) {
             uuid
             lastName
@@ -49,7 +40,7 @@ const App: FunctionComponent = () => {
     })
     .then(({data}) => {
       dispatch({
-        type: "ADD_INITIAL_VALUE",
+        type: ADD_INITIAL_VALUE,
         value: data,
       })
     });

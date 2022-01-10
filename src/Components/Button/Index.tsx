@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CONTEXT } from "../../context";
+import { CONTEXT } from "../../App/context";
 
 const Btn = () => {
     const CTX: any = useContext(CONTEXT);
