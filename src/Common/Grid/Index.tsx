@@ -1,17 +1,24 @@
-import { FunctionComponent } from "react";
+import React,  { FunctionComponent } from "react";
 import styled from 'styled-components';
 
 interface ColInterface {
-    size: number
-    colSize?: number
+    size: number;
+    colSize?: number;
+    styleString?: any;
 };
 
-export const Container: FunctionComponent = styled.div`
-    box-sazing: border-box;    
+interface ContainerInterface {
+    styleString?: any;
+};
+
+export const Container: FunctionComponent<ContainerInterface> = styled('div')<{styleString?: any,}>`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-`;
-export const Col = styled('div')<{size: number, colSize: number}>`
-    width: ${props => props.size * (100/ (props?.colSize || 12))}%
+    flex-wrap: wrap;    
+    ${props => props.styleString}
+`  
+
+export const Col: FunctionComponent<ColInterface> = styled('div')<{size: number, colSize?: number, styleString?: any,}>`
+    width: ${props => props.size * (100 / (props?.colSize || 12))}%;
+    ${props => props.styleString}
 `;

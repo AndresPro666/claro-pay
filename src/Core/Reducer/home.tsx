@@ -1,10 +1,11 @@
 import {ADD_INITIAL_VALUE, ADD_TO_USER_IDENTIFY} from '../Types'
 
+
 export const home = (state: any, action: any): any => {
     switch (action.type) {
         case ADD_INITIAL_VALUE:
             return {
-                ...action.value
+                ...action.value,
             };
 
         case ADD_TO_USER_IDENTIFY:
@@ -14,6 +15,8 @@ export const home = (state: any, action: any): any => {
             };
             
         default:
-            return {...state}
+            return {
+                ...state
+            }
     }
 }
