@@ -1,14 +1,14 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
-interface TitleInterface {
+interface MediaInterface {
     name?: string;
     uri?: string;
     width?: string;
     height?: string;
 };
 
-const RenderTitle: FunctionComponent<TitleInterface> = ({
+const RenderMedia: FunctionComponent<MediaInterface> = ({
     name,
     uri,
     width,
@@ -26,4 +26,4 @@ const RenderTitle: FunctionComponent<TitleInterface> = ({
     )
 }
 
-export default RenderTitle
+export default RenderMedia

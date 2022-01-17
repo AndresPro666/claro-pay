@@ -1,27 +1,18 @@
 import React, { FunctionComponent } from 'react'
+import Media from '../Media';
 import MenuItem from './MenuItem';
-import styled from 'styled-components';
+import {MenuInterface, MenuNavBar} from '../../Styles/menuNavBar';
 
-export type ItemType = {
-    type?: any;
-    value?: any;
-    action?: any; 
-};
-interface MenuInterface {
-    item?: ItemType[];
-    last: ItemType;
-};
-
-const MenuContainer = styled.div`
-    display:flex;
-    flex-direction:column;
-    height: 90vh;
-    margin-top: 1rem;
-`;
-
-const Menu: FunctionComponent<MenuInterface> = ({ item, last}) => {
+const Menu: FunctionComponent<MenuInterface> = ({ item, last, logo }) => {
     return (
-        <MenuContainer>
+        <MenuNavBar>
+            <a href="/">
+                <Media
+                    uri={logo?.uri}
+                    name={logo?.name}
+                    width={logo?.width}
+                />
+            </a>
             {item && item.map(({
                 type,
                 value,
@@ -43,7 +34,7 @@ const Menu: FunctionComponent<MenuInterface> = ({ item, last}) => {
                     action={last?.action}
                 />
             </div>
-        </MenuContainer>
+        </MenuNavBar>
     )
 
 }

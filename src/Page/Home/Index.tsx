@@ -1,7 +1,6 @@
 import React, { FunctionComponent, useContext } from 'react'
 import { Col, Container } from "../../Common/Grid/Index";
 import { CONTEXT } from '../../App/context';
-import Menu from "../../Components/MenuNavBar";
 import Form from "../../Components/Form";
 
 const FormList = [
@@ -31,11 +30,11 @@ const Home: FunctionComponent = () => {
         state,
         dispatch,
     }: any = useContext(CONTEXT);
-
+    console.log(state);
     return (
         <Container>
             <Col size={3}/>
-            <Col size={6}>
+            <Col size={6}>               
                 <Form list={FormList} colSize={6} callback={formFunctionHandler}/>
             </Col>
             <Col size={3}/>

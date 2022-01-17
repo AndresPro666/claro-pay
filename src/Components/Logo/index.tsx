@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import {IconInterface, Icon} from '../../Styles/icon'
 
 
-const FontIcon: FunctionComponent<IconInterface> = ({
+const Logo: FunctionComponent<IconInterface> = ({
     name,
     color,
     size,
@@ -19,4 +19,4 @@ const FontIcon: FunctionComponent<IconInterface> = ({
     )
 }
 
-export default FontIcon
+export default Logo;

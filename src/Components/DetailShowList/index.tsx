@@ -1,5 +1,5 @@
-import React, { FunctionComponent } from 'react'
-import DetailShowList from '../../Styles/detailShowList'
+import React, { FunctionComponent } from 'react';
+import DetailShowList from '../../Styles/detailShowList/Index';
 import Title from '../Title';
 import Item from './ListItem';
 

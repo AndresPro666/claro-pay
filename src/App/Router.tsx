@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes as Switch } from 'react-router-dom';
-import Home from '../Page/Home';
-import NotFoundPage from '../Page/NotFoundPage';
-import ResultSearch from '../Page/ResultSearch';
+import Home from '../Page/Home/Index';
+import NotFoundPage from '../Page/NotFoundPage/index';
+import ResultSearch from '../Page/ResultSearch/index';
 
 const Router = () => {
 

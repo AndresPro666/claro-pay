@@ -4,8 +4,6 @@ import styled from 'styled-components';
 const Icon = styled.img` 
     max-width: 20px;
     padding: 1rem;
-
-
     &:hover{
         fill:white;   //Como atacar fill 
         background: #1F97AE;
@@ -13,7 +11,8 @@ const Icon = styled.img`
         transition: .2s;
     }
 `;
-const MenuItemDiv = styled.a``;  //Es para anchors
+const MenuItemDiv = styled.a`
+`;  //Es para anchors
 
 interface MenuItemInterface {   // No se que es 
     type: string;
