@@ -44,4 +44,5 @@ export const COLORS = {
     GREY: 'grey',
     WHITE: '#fff',
     SECONDARY: 'accept',
+    HOVER_BUTTON: "#1F97AE"
 };

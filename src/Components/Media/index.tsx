@@ -1,28 +1,21 @@
 import React, { FunctionComponent } from 'react'
-import styled from 'styled-components'
-
-interface MediaInterface {
-    name?: string;
-    uri?: string;
-    width?: string;
-    height?: string;
-};
+import { MediaInterface, Media } from '../../Styles/media'
 
 const RenderMedia: FunctionComponent<MediaInterface> = ({
     name,
     uri,
     width,
     height,
+    hoverColor,
+    padding
 }) => {
-    const Media = styled.img`
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    `
     return (
-        <>
-            <Media src={uri} alt={name} width={width} height={height} />
-        </>
+        <Media padding={padding}
+            hoverColor={hoverColor}
+            src={uri} alt={name}
+            width={width}
+            height={height}
+        />
     )
 }
 

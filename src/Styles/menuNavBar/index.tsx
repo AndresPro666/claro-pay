@@ -25,6 +25,12 @@ export const MenuNavBar: FunctionComponent = styled.div`
     display:flex;
     position: fixed;
     flex-direction:column;
-    height: 90vh;
+    height: 100vh;
     margin-top: 1rem;
+`  
+
+export const LastItem: FunctionComponent = styled.div`
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
 `  

@@ -11,7 +11,6 @@ const DisplayInfo: FunctionComponent<DisplayUser> = ({ user }) => {
 
     return (
         <Container>
-            <HorizontalDivisor />
             {user && user.map((user) =>
                 <Col size={user?.col}>
                     <Element>

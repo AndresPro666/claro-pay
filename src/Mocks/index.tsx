@@ -13,24 +13,24 @@ export const MenuMock =  {
       },
       'item': [
         {
-            type: 'Icon',
+            type: 'Media',
             value: logo1,
             action: '/',
         },
         {
-            type: 'Icon',
+            type: 'Media',
             value: logo2,
             action: '/pag-1',
         },
         {
-            type: 'Icon',
+            type: 'Media',
             value: logo3,
-            action: '/pag-2',
+            action: '/result-search',
         },
         
     ],
       'last': {
-        type: 'Icon',
+        type: 'Media',
         value: logoExit,
         action: '/'
       }
